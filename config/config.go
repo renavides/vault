@@ -28,9 +28,9 @@ type Config struct {
 }
 
 func (c *Config) Read() {
-	viper.SetConfigName("config/config")
+	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
-	viper.AddConfigPath(".")
+	viper.AddConfigPath("./config/")
 	viper.SetDefault("Server.Port", "8080")
 	//Vault Defaults
 	viper.SetDefault("Vault.Host", "127.0.0.1")
