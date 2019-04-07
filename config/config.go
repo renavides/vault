@@ -27,8 +27,8 @@ type Config struct {
 	} `yaml:"vault"`
 }
 
-func (c *Config) Read() {
-	viper.SetConfigName("config")
+func (c *Config) Read(path string) {
+	viper.SetConfigName("config/config")
 	viper.SetConfigType("yaml")
 	viper.AddConfigPath(".")
 	viper.SetDefault("Server.Port", "8080")
